@@ -17,8 +17,7 @@ namespace CreditelApp.Services
         {
             var message = new MailMessage();
             message.From = new MailAddress(_config["Email:From"]);
-            //message.To.Add("fyasocialcapital@gmail.com");
-            message.To.Add("danielmeza1824@gmail.com");
+            message.To.Add("fyasocialcapital@gmail.com");
             message.Subject = "Nuevo crédito registrado";
             message.Body = $"Cliente: {client}\nValor: {amount}\nComercial: {commercial}\nFecha: {DateTime.Now}";
 
